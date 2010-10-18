@@ -2,5 +2,7 @@
   "sections": [
     {"section":"intro"},
     {"section":"start_button"},
-    {"section":"sinatra"}
+    {"section":"sinatra_install"},
+    {"section":"jquery_doors"},
+    {"section":"sinatra_params"}
   ]}

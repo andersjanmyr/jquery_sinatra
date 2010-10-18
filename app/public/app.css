@@ -35,6 +35,14 @@ li {
   margin: 16px;
 }
 
+li.hover {
+  position: relative;
+  top: 2px;
+  left: 2px;
+  color: green;
+  font-size: 64px;
+}
+
 #stick-switch {
   clear: both;
 }

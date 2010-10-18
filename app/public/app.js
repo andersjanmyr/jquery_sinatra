@@ -10,24 +10,34 @@ $(function() {
   }
 
   function enableDoors() {
-    $('#info-text').text();
+    info("Select a door!" + currentToken);
+    $('#doors li')
+    .hover(function() {$(this).addClass('hover')}, function() {$(this).removeClass('hover')})
+    .click(function() {
+      var door = $(this).attr('data-id');
+      alert(door);
+    });
   }
 
   $('#start').click(function() {
     info("New quiz started");
+    $('#start').attr('disabled', 'disabled');
     $.ajax({
       type: 'PUT',
       url: '/start',
       dataType: 'text',
       success: function(token) {
-        $(this).attr('disabled', 'disabled');
         saveToken(token);
         enableDoors();
-      },
-      error: function(xhr, textStatus, errorThrown) {
-        info('Error! ' + ( errorThrown ? errorThrown : xhr.status ));
       }
     });
+  });
+
+  $.ajaxSetup({
+    dataType: 'text',
+    error: function(xhr, status, error) {
+      info('Error! ' +  ( error ? error : xhr.status ));
+    }
   });
 
 });
