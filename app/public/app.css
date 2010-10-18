@@ -40,9 +40,17 @@ li {
 }
 
 #stick-switch span {
-  margin: 48px;
-  font-size: 64px;
+  margin: 14px;
+  padding: 0 8px;
+  font-size: 36px;
   font-weight: bold;
+  background-color: gray;
+  -webkit-border-radius: .2em;
+  -moz-border-radius: .2em;
+  border-radius: .2em;
+  border: solid 1px #888;
+  background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#fff));
+  background: -moz-linear-gradient(top,  #eee,  #fff);
 }
 
 button {

@@ -14,4 +14,5 @@
 # Sinatra #
 ## The classy web framework
 
-!slide
+!SLIDE center transition=scrollUp
+![Tapir App](where_is_the_tapir_app.png)
