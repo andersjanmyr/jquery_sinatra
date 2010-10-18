@@ -1,5 +1,0 @@
-!SLIDE jquery
-# .click handler
-
-
-

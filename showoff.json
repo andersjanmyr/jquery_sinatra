@@ -1,5 +1,6 @@
 { "name": "jQuery and Sinatra",
   "sections": [
     {"section":"intro"},
-    {"section":"jquery_click"}
+    {"section":"start_button"},
+    {"section":"sinatra"}
   ]}

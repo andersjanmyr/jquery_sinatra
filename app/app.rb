@@ -1,7 +1,6 @@
 # encoding: UTF-8
 require 'rubygems'
 require 'sinatra'
-require 'haml'
 
 set :public, File.dirname(__FILE__) + "/public"
 
@@ -13,6 +12,8 @@ end
 enable :run
 
 get "/" do
-  redirect :index
+  redirect 'index.html'
 end
 
+put "/start" do
+end

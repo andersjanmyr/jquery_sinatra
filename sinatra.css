@@ -1,11 +1,11 @@
 .sinatra {
-  background: url(imges/sinatra.gif) no-repeat;
+  background: url(images/sinatra.gif) no-repeat;
   width: 1020px;
   height: 760px;
 }
 
 .jquery {
-  background: url(images/jquery.png) center no-repeat;
+  background: url(images/jquery.png) center bottom no-repeat;
   width: 1020px;
   height: 760px;
 }
