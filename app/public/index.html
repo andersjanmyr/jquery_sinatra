@@ -5,23 +5,26 @@
 <body>
   <form>
     <h1>Where is the Tapir?</h1>
-    <button id='start' class='orange'>Start</button>
-    <label id='pick'>Pick a Door!</label>
+    <div id='start-header'>
+      <button id='start' class='orange'>Start</button>
+      <h2 id='pick-door'>Pick a Door!</h2>
+      <h2 id='stick-or-switch'>Stick or Switch!</h2>
+    </div>
     <ul id='doors'>
       <li data-id='1'>1</li>
       <li data-id='2'>2</li>
       <li data-id='3'>3</li>
     </ul>
     <div id='stick-switch'>
-      <button data-id='stick' class='orange'>Stick</button>
-      <button data-id='switch' class='orange'>Switch</button>
+      <span id='stick-count'>0</span>
+      <button data-id='stick' class='orange' disabled>Stick</button>
+      <button data-id='switch' class='orange' disabled>Switch</button>
+      <span id='switch-count'>0</span>
     </div>
   </form>
 
 
-<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js'>
-</script>
-<script type="text/javascript" src="app.js">
-</script>
+  <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js'> </script>
+  <script type="text/javascript" src="app.js"> </script>
 </body>
 </html>
