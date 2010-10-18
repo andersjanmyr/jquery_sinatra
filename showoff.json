@@ -1,5 +1,5 @@
 { "name": "jQuery and Sinatra",
   "sections": [
     {"section":"intro"},
-    {"section":"sinatra"}
+    {"section":"jquery_click"}
   ]}

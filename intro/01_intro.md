@@ -13,3 +13,5 @@
 !SLIDE sinatra
 # Sinatra #
 ## The classy web framework
+
+!slide
