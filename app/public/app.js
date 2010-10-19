@@ -79,11 +79,18 @@ $(function() {
       : $('#doors li.enabled').attr('data-id');
     $.ajax({
       type: 'PUT',
+      dataType: 'json',
       url: '/quiz/' + currentToken + '/' + value + '/' + door,
       success: function(data) {
         info(data);
+        $('#door-' + data.answer).removeClass('selected enabled removed').addClass('tapir');
+        updateStats(data);
       }
     });
+  }
+
+  function updateStats(stats) {
+    // body...
   }
 
 
