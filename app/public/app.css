@@ -35,6 +35,10 @@ li {
   margin: 16px;
 }
 
+li div {
+  display: none;
+}
+
 li.enabled {
   background-image: url(images/door-enabled.png);
 }
@@ -49,7 +53,14 @@ li.removed {
 
 li.removed div {
   color: red;
-  -webkit-transform: rotate(70deg) translate(40px, 10px);
+  background-color: white;
+  font-size: 48px;
+  display: block;
+  -webkit-transform: rotate(70deg) translate(-40px, 10px);
+  -webkit-border-radius: .5em;
+  -moz-border-radius: .5em;
+  border-radius: .5em;
+  padding-right: 22px;
 }
 
 li.tapir {

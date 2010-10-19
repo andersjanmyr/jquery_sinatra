@@ -38,6 +38,7 @@ $(function() {
     info("Select a door!");
     $('#doors li')
       .addClass('enabled')
+      .removeClass('selected removed tapir')
       .hover(
         function() {$(this).addClass('hover')},
         function() {$(this).removeClass('hover')})
@@ -82,9 +83,12 @@ $(function() {
       dataType: 'json',
       url: '/quiz/' + currentToken + '/' + value + '/' + door,
       success: function(data) {
-        $('#door-' + data.answer).removeClass('selected enabled removed').addClass('tapir');
+        $('#door-' + data.answer)
+          .removeClass('selected enabled removed')
+          .addClass('tapir');
         infoResult(data);
         updateStats(data);
+        resetButtons();
       }
     });
   }
@@ -106,8 +110,13 @@ $(function() {
 
   function updateStat(kind, data) {
     var arr = data[kind];
-    var percentage = arr[0] / arr[1] * 100;
+    var percentage = parseInt(arr[0] / arr[1] * 100);
     $('#' + kind + '-count').text(arr[0] + '/' + arr[1] + ' = ' + percentage + '%');
+  }
+
+  function resetButtons() {
+    $('#start').removeAttr('disabled');
+    $('#stick-switch button').attr('disabled', 'disabled');
   }
 
 
