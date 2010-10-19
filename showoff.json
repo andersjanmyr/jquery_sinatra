@@ -1,8 +1,7 @@
 { "name": "jQuery and Sinatra",
   "sections": [
     {"section":"intro"},
+    {"section":"get_started"},
     {"section":"start_button"},
-    {"section":"sinatra_install"},
-    {"section":"jquery_doors"},
     {"section":"sinatra_params"}
   ]}

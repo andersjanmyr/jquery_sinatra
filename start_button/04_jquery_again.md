@@ -3,7 +3,7 @@
 
     @@@ Javascript
     $.ajax({
-      type: 'PUT',
+      type: 'POST',
       url: '/start',
       dataType: 'text',
       success: function(token) {
@@ -33,7 +33,7 @@
 
     @@@ Javascript
     $.ajax({
-      type: 'PUT',
+      type: 'POST',
       url: '/start',
       success: function(token) {
         $('#start').attr('disabled', 'disabled');

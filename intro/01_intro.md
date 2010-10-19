@@ -7,12 +7,21 @@
 .notes Old man, short attention span, No time to wait for Maven, Dynamic languages, fast feedback
 
 !SLIDE jquery
-# jQuery #
+# jQuery
 ## Write less, do more
 
 !SLIDE sinatra
-# Sinatra #
+# Sinatra
 ## The classy web framework
 
 !SLIDE center transition=scrollUp
 ![Tapir App](where_is_the_tapir_app.png)
+
+!SLIDE bullets
+# What are you?
+
+* Sticker, the odds are better if I stick!
+
+* Switcharoo, the odds are better if I switch!
+
+* Don't care, the odds are the same!

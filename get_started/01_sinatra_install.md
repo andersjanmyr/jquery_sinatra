@@ -17,15 +17,16 @@
 
 
 !SLIDE code sinatra
-# Setup Code
+# Setup Sinatra
 
     @@@ ruby
     # app.rb
     require 'rubygems'
     require 'sinatra'
 
-    put "/start" do
-    end
+    # Serve static files from public
+    set :public, "./public"
+
 
 !SLIDE bullets sinatra
 

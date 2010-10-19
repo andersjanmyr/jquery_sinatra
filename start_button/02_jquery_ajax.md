@@ -5,7 +5,7 @@
 
     @@@ Javascript
     $.ajax({
-      type: 'PUT',
+      type: 'POST',
       url: '/start',
       dataType: 'text',
       success: function(data) { ... },

@@ -2,7 +2,7 @@
 require 'rubygems'
 require 'sinatra'
 
-set :public, File.dirname(__FILE__) + "/public"
+set :public, "./public"
 
 configure(:development) do |c|
   require "sinatra/reloader"
@@ -18,7 +18,7 @@ end
 $token_counter = 0
 $quizzes = {};
 
-put "/start" do
+post "/start" do
   $token_counter += 1
   $quizzes[$token_counter] = rand(3) + 1
   p $quizzes

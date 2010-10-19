@@ -12,18 +12,19 @@ $(function() {
   function enableDoors() {
     info("Select a door!" + currentToken);
     $('#doors li')
-    .hover(function() {$(this).addClass('hover')}, function() {$(this).removeClass('hover')})
-    .click(function() {
-      var door = $(this).attr('data-id');
-      alert(door);
-    });
+      .addClass('enabled')
+      .hover(function() {$(this).addClass('hover')}, function() {$(this).removeClass('hover')})
+      .click(function() {
+        var door = $(this).addClass('selected').attr('data-id');
+        $('#doors li').unbind('click mouseenter mouseleave').removeClass('enabled');
+      });
   }
 
   $('#start').click(function() {
     info("New quiz started");
     $('#start').attr('disabled', 'disabled');
     $.ajax({
-      type: 'PUT',
+      type: 'POST',
       url: '/start',
       dataType: 'text',
       success: function(token) {
