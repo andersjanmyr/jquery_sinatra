@@ -25,7 +25,7 @@ $(function() {
     $('#start').attr('disabled', 'disabled');
     $.ajax({
       type: 'POST',
-      url: '/start',
+      url: '/quiz',
       dataType: 'text',
       success: function(token) {
         saveToken(token);

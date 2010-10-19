@@ -6,7 +6,7 @@
     @@@ Javascript
     $.ajax({
       type: 'POST',
-      url: '/start',
+      url: '/quiz',
       dataType: 'text',
       success: function(data) { ... },
       error: function(xhr, status, error) {

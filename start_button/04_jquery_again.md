@@ -4,7 +4,7 @@
     @@@ Javascript
     $.ajax({
       type: 'POST',
-      url: '/start',
+      url: '/quiz',
       dataType: 'text',
       success: function(token) {
         $('#start').attr('disabled', 'disabled');
@@ -34,7 +34,7 @@
     @@@ Javascript
     $.ajax({
       type: 'POST',
-      url: '/start',
+      url: '/quiz',
       success: function(token) {
         $('#start').attr('disabled', 'disabled');
         saveToken(token);

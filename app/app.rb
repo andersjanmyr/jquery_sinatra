@@ -18,7 +18,7 @@ end
 $token_counter = 0
 $quizzes = {};
 
-post "/start" do
+post "/quiz" do
   $token_counter += 1
   $quizzes[$token_counter] = rand(3) + 1
   p $quizzes
