@@ -52,6 +52,10 @@ li.removed div {
   -webkit-transform: rotate(70deg) translate(40px, 10px);
 }
 
+li.tapir {
+  background-image: url(images/door-tapir.png);
+}
+
 li.hover {
   position: relative;
   top: 2px;

@@ -18,7 +18,6 @@ $(function() {
     postQuiz();
   });
 
-
   function postQuiz() {
     $.ajax({
       type: 'POST',
@@ -43,10 +42,12 @@ $(function() {
         function() {$(this).addClass('hover')},
         function() {$(this).removeClass('hover')})
       .click(function() {
-        var door = $(this).addClass('selected').attr('data-id');
+        var door = $(this)
+          .removeClass('enabled')
+          .addClass('selected')
+          .attr('data-id');
         $('#doors li')
           .unbind('click mouseenter mouseleave')
-          .removeClass('enabled');
         putSelected(door);
       });
   }
@@ -57,10 +58,33 @@ $(function() {
       url: '/quiz/' + currentToken + '/select/' + door,
       success: function(data) {
         info("Stick or Switch!");
-        $('#door-' + data).addClass('removed').find('div').text('Removed');
+        $('#door-' + data)
+          .removeClass('enabled')
+          .addClass('removed')
+          .find('div').text('Removed');
         $('#stick-switch button').removeAttr('disabled');
       }
     });
   }
+
+  $('#stick-switch button').click(function(e) {
+    e.preventDefault();
+    var value = $(this).attr('data-id');
+    putStickOrSwitch(value);
+  });
+
+  function putStickOrSwitch(value) {
+    var door = (value == 'stick')
+      ? $('#doors li.selected').attr('data-id')
+      : $('#doors li.enabled').attr('data-id');
+    $.ajax({
+      type: 'PUT',
+      url: '/quiz/' + currentToken + '/' + value + '/' + door,
+      success: function(data) {
+        info(data);
+      }
+    });
+  }
+
 
 });
