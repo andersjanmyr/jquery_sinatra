@@ -2,10 +2,10 @@
 
 # Routes, HTTP Verbs
 
-* GET
-* POST
-* PUT
-* DELETE
+* GET - get
+* POST - post
+* PUT - put
+* DELETE - delete
 
 !SLIDE sinatra code
 # /quiz implementation
@@ -17,6 +17,5 @@
     post "/quiz" do
       $token_counter += 1
       $quizzes[$token_counter] = rand(3) + 1
-      p $quizzes
       $token_counter
     end

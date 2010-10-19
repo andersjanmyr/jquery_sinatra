@@ -43,6 +43,15 @@ li.selected {
   background-image: url(images/door-selected.png);
 }
 
+li.removed {
+  background-image: url(images/door-removed.png);
+}
+
+li.removed div {
+  color: red;
+  -webkit-transform: rotate(70deg) translate(40px, 10px);
+}
+
 li.hover {
   position: relative;
   top: 2px;

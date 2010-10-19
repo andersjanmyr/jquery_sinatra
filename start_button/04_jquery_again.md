@@ -47,12 +47,30 @@
 # ajax call refactored
 
     @@@ Javascript
+    var currentToken;
     function saveToken(token) {
       currentToken = token;
     }
 
-    var currentToken;
     function enableDoors() {
       info("Select a door!");
     }
 
+!SLIDE jquery
+# enableDoors
+
+    @@@ Javascript
+    function enableDoors() {
+       info("Select a door!" + currentToken);
+       $('#doors li')
+         .addClass('enabled')
+         .hover(
+            function() {$(this).addClass('hover')},
+            function() {$(this).removeClass('hover')})
+         .click(function() {
+           var door = $(this).addClass('selected').attr('data-id');
+           $('#doors li')
+            .unbind('click mouseenter mouseleave')
+            .removeClass('enabled');
+         });
+     }
