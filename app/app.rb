@@ -42,15 +42,18 @@ $switch_count = 0
 $switch_correct_count = 0
 put "/quiz/:quiz/:stick_or_switch/:door" do |quiz, stick_or_switch, door|
   answer = $quizzes[quiz.to_i]
+  correct = answer == door.to_i
   if stick_or_switch == 'stick'
     $stick_count += 1
-    $stick_correct_count += 1 if answer == door.to_i
+    $stick_correct_count += 1 if correct
   else
     $switch_count += 1
-    $switch_correct_count += 1 if answer == door.to_i
+    $switch_correct_count += 1 if correct
   end
   {
     :answer => answer,
+    :correct => correct,
+    :stick_or_switch => stick_or_switch,
     :stick => [$stick_correct_count, $stick_count],
     :switch => [$switch_correct_count, $switch_count]
   }.to_json

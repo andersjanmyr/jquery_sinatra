@@ -82,15 +82,32 @@ $(function() {
       dataType: 'json',
       url: '/quiz/' + currentToken + '/' + value + '/' + door,
       success: function(data) {
-        info(data);
         $('#door-' + data.answer).removeClass('selected enabled removed').addClass('tapir');
+        infoResult(data);
         updateStats(data);
       }
     });
   }
 
-  function updateStats(stats) {
-    // body...
+  function infoResult(data) {
+    var right_or_wrong = data.correct ? ' right!' : ' wrong!';
+    var message =
+      (data.stick_or_switch == 'stick'
+        ? 'You stick, and you are'
+        : 'You switcharoo, you are')
+      + right_or_wrong;
+    info(message);
+  }
+
+  function updateStats(data) {
+    updateStat('stick', data);
+    updateStat('switch', data);
+  }
+
+  function updateStat(kind, data) {
+    var arr = data[kind];
+    var percentage = arr[0] / arr[1] * 100;
+    $('#' + kind + '-count').text(arr[0] + '/' + arr[1] + ' = ' + percentage + '%');
   }
 
 
