@@ -1,7 +1,6 @@
 !SLIDE jquery
 # Ajax
 ## Asynchronous Http Request
-.notes PUT does not work for all browsers, make sure you check
 
     @@@ Javascript
     $.ajax({
@@ -23,6 +22,15 @@
 * $.load()
 * $.getJSON()
 * $.getScript()
+
+!SLIDE jquery
+# Post
+
+    @@@ Javascript
+    $.post('/quiz',
+      function(data) { ... }, 'text');
+    // No error handling
+
 
 !SLIDE center transition=scrollDown
 ![404](start_button_404.png)

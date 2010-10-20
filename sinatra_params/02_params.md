@@ -1,62 +1,52 @@
 !SLIDE code sinatra
 
-# Query Parameters
+# Put with Parameters
 
     @@@ ruby
-    get '/hello' do
-      "Hello #{params[:name]}"
+    put '/quiz/:quiz/select/:door' do
+      "#{params[:quiz]}, #{params[:door]}"
     end
 
-    # curl http://localhost/hello?name=dude
-    # => Hello Dude
-
+    # /quiz/234/select/3
+    # => 234, 3
 
 !SLIDE code sinatra
 
-# Path Parameters
+# Put with Block Parameters
 
     @@@ ruby
-    get '/hello/:name' do
-      "Hello #{params[:name]}"
+    put '/quiz/:quiz/select/:door' do |q, d|
+      "#{q}, #{d}"
     end
 
-    # curl http://localhost/hello/dude
-    # => Hello Dude
+    # /quiz/234/select/3
+    # => 234, 3
 
 !SLIDE code sinatra
 
-# Path Parameters with block
-
+# Splat Parameters with Block
     @@@ ruby
-    get '/hello/:name' do |n|
-      "Hello #{n}"
+    put '/quiz/*/select/*' do
+      "#{params[:splot]}"
     end
 
-    # curl http://localhost/hello/dude
-    # => Hello Dude
+    # /quiz/234/select/3
+    # => 234, 3
+
+    # /quiz/234/select/3/5/6
+    # => 234, 3/5/6
 
 !SLIDE code sinatra
-
-# Splat Parameters
-
-    @@@ ruby
-    get '/many/*/can/*' do
-      "Many #{params[:splat]}"
-    end
-
-    # curl http://localhost:4567/many/params/can/be/added
-    # => Many ["params", "be/added"]
-
-!SLIDE code sinatra
-
-# Splat Params with Block
+# Splat Parameters with Block
 
     @@@ ruby
-    get '/many/*/can/*' do |first, rest|
-      "First #{first}, Rest #{rest}"
+    put '/quiz/*/select/*' do |q, d|
+      "#{q}, #{d}"
     end
 
-    # curl http://localhost:4567/many/params/can/be/added
-    # => First params, Rest be/added
+    # /quiz/234/select/3
+    # => 234, 3
 
+    # /quiz/234/select/3/5/6
+    # => 234, 3/5/6
 

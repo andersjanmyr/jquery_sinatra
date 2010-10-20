@@ -3,5 +3,6 @@
     {"section":"intro"},
     {"section":"get_started"},
     {"section":"start_button"},
+    {"section":"doors"},
     {"section":"sinatra_params"}
   ]}

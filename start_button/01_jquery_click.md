@@ -5,12 +5,13 @@
 * Do something with it
 
 !SLIDE jquery code
-# .click
+# .click, attr, text
 
     @@@ Javascript
     $(function() { //jQuery document ready
 
-      $('#start').click(function() {
+      $('#start').click(function(e) {
+        e.preventDefault();
         $(this).attr('disabled', 'disabled');
         $('#info-text').text("New quiz started");
         $.ajax(...);
@@ -27,7 +28,8 @@
         $('#info-text').text(text);
       }
 
-      $('#start').click(function() {
+      $('#start').click(function(e) {
+        e.preventDefault();
         $(this).attr('disabled', 'disabled');
         info("New quiz started");
         $.ajax(...);

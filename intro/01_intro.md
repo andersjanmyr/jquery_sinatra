@@ -15,6 +15,9 @@
 ## The classy web framework
 
 !SLIDE center transition=scrollUp
+![Tapir App No Style](where_is_the_tapir_no_style.png)
+
+!SLIDE center transition=scrollUp
 ![Tapir App](where_is_the_tapir_app.png)
 
 !SLIDE bullets
