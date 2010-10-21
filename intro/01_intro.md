@@ -14,7 +14,7 @@
 # Sinatra
 ## The classy web framework
 
-!SLIDE center transition=scrollUp
+!SLIDE center
 ![Tapir App No Style](where_is_the_tapir_no_style.png)
 
 !SLIDE center transition=scrollUp

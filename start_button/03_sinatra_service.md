@@ -1,3 +1,11 @@
+!SLIDE sinatra code
+# post /quiz
+
+    @@@ Ruby
+    post "/quiz" do
+    end
+
+
 !SLIDE bullets sinatra
 
 # Routes, HTTP Verbs
@@ -17,5 +25,5 @@
     post "/quiz" do
       $token_counter += 1
       $quizzes[$token_counter] = rand(3) + 1
-      $token_counter
+      $token_counter.to_s
     end

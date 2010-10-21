@@ -1,6 +1,6 @@
 !SLIDE jquery
 # enableDoors
-## addClass, removeClass, hover
+## addClass, removeClass, hover, bind
 
     @@@ Javascript
     function enableDoors() {
@@ -10,34 +10,24 @@
         .hover(
           function() {$(this).addClass('hover')},
           function() {$(this).removeClass('hover')})
-        .click(doorSelected);
+        .bind('click', doorSelected);
     }
+
+!SLIDE center transition=scrollUp
+![Tapir App](doors_enabled.png)
 
 !SLIDE jquery
 # doorSelected
-## unbind, mouseenter, mouseleave
+## attr, unbind, mouseenter, mouseleave
 
     @@@ Javascript
     function doorSelected(e) {
-      e.preventDefault();
-      var door = $(this)
-        .removeClass('enabled')
-        .addClass('selected')
-        .attr('data-id');
+      ...
+      var door = $(this).attr('data-id');
       $('#doors li')
         .unbind('click mouseenter mouseleave')
       putSelected(door);
     }
-
-!SLIDE jquery
-# doorSelected
-## unbind, mouseenter, mouseleave
-
-    @@@ Javascript
-    $('#doors li')
-      .unbind('click mouseenter mouseleave')
-    putSelected(door);
-
 
 !SLIDE jquery
 # putSelected
