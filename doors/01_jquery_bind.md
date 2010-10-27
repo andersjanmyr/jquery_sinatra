@@ -37,7 +37,8 @@
     function putSelected(door) {
       $.ajax({
         type: 'PUT',
-        url: '/quiz/' + currentToken + '/select/' + door,
+        url: '/quiz/' + currentToken
+                  + '/select/' + door,
         success: function(data) { ... }
       });
     }
