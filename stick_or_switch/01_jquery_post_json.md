@@ -3,7 +3,7 @@
 
 !SLIDE jquery
 # postStickOrSwitch
-## removeAttr
+## json
 
     @@@ Javascript
     function postStickOrSwitch(stickOrSwitch, door) {

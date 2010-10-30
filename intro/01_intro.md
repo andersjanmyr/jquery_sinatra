@@ -25,6 +25,6 @@
 
 * Sticker, the odds are better if I stick!
 
-* Switcharoo, the odds are better if I switch!
+* Switcher, the odds are better if I switch!
 
 * Don't care, the odds are the same!

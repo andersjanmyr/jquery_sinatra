@@ -8,7 +8,7 @@
 
 !SLIDE code sinatra
 
-# Splat Parameters with Block
+# Splat Parameters
     @@@ ruby
     put '/quiz/*/select/*' do
       "#{params[:splat]}"
@@ -42,9 +42,12 @@
     post "/stats/*/*/*" do |quiz, s_or_s, door|
       answer = $quizzes[quiz.to_i]
       update_stats(s_or_s)
-      message = stats()
-      message[:answer] = answer
-      message[:correct] = (answer == door.to_i)
-      message[:stick_or_switch] = s_or_s
+      message = {
+        :stick => [$stick_correct_count, $stick_count],
+        :switch => [$switch_correct_count, $switch_count],
+        :answer => answer,
+        :correct => (answer == door.to_i),
+        :stick_or_switch => s_or_s}
       message.to_json
     end
+
