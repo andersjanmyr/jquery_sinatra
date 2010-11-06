@@ -1,8 +1,8 @@
 jQuery and Sinatra, a Classy Combination
 
-jQuery is a simple, lightweight, Javascript library that has taken the web application world by storm. The slogan for jQuery is 'Write less, do more'.
+jQuery is a simple, lightweight, Javascript library that has taken the web application world by storm. The slogan for jQuery is 'Write less, do more'. jQuery is a must for anyone developing for the web.
 
-Sinatra is a simple, lightweight, web framework that allows you to develop REST applications with a minimum of overhead. The slogan for Sinatra is 'Classy web-development dressed in a DSL'.
+Sinatra is a simple, lightweight, web framework that allows you to develop REST applications with a minimum of overhead. The slogan for Sinatra is 'Classy web-development dressed in a DSL'. Sinatra is a really simple way to get a web-service up and running in minutes.
 
 In this presentation we will develop a one-page web application using jQuery and Sinatra. Modern web application development does not have to be complicated, if you choose the right tools for the job.
 
