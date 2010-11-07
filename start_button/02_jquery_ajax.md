@@ -17,19 +17,23 @@
 !SLIDE jquery bullets
 # Ajax Shortcuts
 
-* $.get()
-* $.post()
-* $.load()
-* $.getJSON()
-* $.getScript()
+    @@@ Javascript
+    $.get(url, data, successCallback, dataType);
+    $.post(url, data, successCallback, dataType);
+    $.getJSON(url, data, successCallback);
+    $.getScript(url, data, successCallback);
+    .load(url, data, successCallback);
+    // No error handling
 
 !SLIDE jquery
 # Post
 
     @@@ Javascript
     $.post('/quiz',
-      function(data) { ... }, 'text');
-    // No error handling
+      function(data) { ... },
+      'text');
+
+      // No error handling
 
 
 !SLIDE center transition=scrollDown

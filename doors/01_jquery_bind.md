@@ -18,12 +18,12 @@
 
 !SLIDE jquery
 # doorSelected
-## attr, unbind, mouseenter, mouseleave
+## data, unbind, mouseenter, mouseleave
 
     @@@ Javascript
     function doorSelected(e) {
       ...
-      var door = $(this).attr('data-id');
+      var door = $(this).data('id');
       $('#doors li')
         .unbind('click mouseenter mouseleave')
       putSelected(door);

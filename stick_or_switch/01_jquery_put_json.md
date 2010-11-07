@@ -2,15 +2,15 @@
 ![Tapir App](stick_or_switch.png)
 
 !SLIDE jquery
-# postStickOrSwitch
+# putChoice
 ## json
 
     @@@ Javascript
-    function postStickOrSwitch(stickOrSwitch, door) {
+    function putChoice(value) {
       $.ajax({
-        type: 'POST',
+        type: 'PUT',
         dataType: 'json',
-        url: '/stats/' + currentToken + '/' + stickOrSwitch + '/' + door,
+        url: '/quiz/' + currentToken + '/' + value ,
         success: function(data) {
           ...
         }

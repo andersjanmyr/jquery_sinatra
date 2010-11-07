@@ -1,5 +1,4 @@
 !SLIDE code sinatra
-
 # Put with Parameters
 
     @@@ ruby
@@ -11,7 +10,6 @@
     # => 234, 3
 
 !SLIDE code sinatra
-
 # Put with Block Parameters
 
     @@@ ruby
@@ -25,15 +23,31 @@
     # /quiz/234/select/3/5/6
     # => "HTTP/1.1" 404
 
+!SLIDE code sinatra
+# Query Parameters
+
+    @@@ ruby
+    put '/quiz' do
+      "#{params[:quiz]}, #{params[:door]}"
+    end
+
+    # GET Style
+    # /quiz?quiz=234&door=3
+    # => 234, 3
+
+    # POST Style
+    # /quiz
+    # quiz=234&door=3
+    # => 234, 3
+
+
 
 !SLIDE sinatra
-# /quiz/:quiz/select/:door impl
+# /quiz/:quiz/select/:door
+## Implementation
 
-    @@@ Javascript
+    @@@ ruby
     put "/quiz/:quiz/select/:door" do |quiz, door|
-      answer = $quizzes[quiz.to_i]
-      doors = [1,2,3]
-      doors.delete(door.to_i)
-      doors.delete(answer)
-      doors[rand(doors.length + 1) - 1].to_s
+      quiz = Quiz.quizzes[quiz.to_i]
+      quiz.remove_door(door).to_s
     end

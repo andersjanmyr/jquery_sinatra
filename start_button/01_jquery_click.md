@@ -5,7 +5,7 @@
 * Do something with it
 
 !SLIDE jquery code
-# .click, attr, text
+## click, preventDefault, attr, text
 
     @@@ Javascript
     $(function() { //jQuery document ready

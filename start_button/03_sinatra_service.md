@@ -1,3 +1,6 @@
+!SLIDE center
+![404](sinatra_404.png)
+
 !SLIDE sinatra code
 # post /quiz
 
@@ -9,10 +12,11 @@
 !SLIDE bullets sinatra
 # Routes, HTTP Verbs
 
-* GET - get
-* POST - post
-* PUT - put
-* DELETE - delete
+    @@@ Ruby
+    get     # GET
+    post    # POST
+    put     # PUT
+    delete  # DELETE
 
 !SLIDE sinatra code
 # /quiz implementation

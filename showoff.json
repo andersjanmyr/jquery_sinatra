@@ -4,5 +4,6 @@
     {"section":"get_started"},
     {"section":"start_button"},
     {"section":"doors"},
-    {"section":"stick_or_switch"}
+    {"section":"stick_or_switch"},
+    {"section":"summary"}
   ]}
