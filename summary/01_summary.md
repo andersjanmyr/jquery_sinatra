@@ -11,6 +11,19 @@
 
 * http://github.com/andersjanmyr/jquery_sinatra
 
+!SLIDE
+# Credits
+
+!SLIDE bullets small
+# Sinatra
+
+* *Views/Templates*: Haml, Erb, Rdoc, Sass, Markdown, ...
+* *Filters*: before and after
+* *Error handling*, Simple custom error handling
+* *Rack*: Middleware, compression, speling, recording, ...
+* *Testing*, Simple testing with Rack::Test
+* ...
+
 
 !SLIDE bullets small
 # Showoff
@@ -21,9 +34,9 @@
 * https://github.com/schacon/showoff
 
 !SLIDE commandline
-# Heroku Deploy
+# Heroku
 
-    $ git push heroku master
+    $ git push heroku master  #deploy to heroku
     Counting objects: 9, done.
     Delta compression using up to 2 threads.
     Compressing objects: 100% (5/5), done.
