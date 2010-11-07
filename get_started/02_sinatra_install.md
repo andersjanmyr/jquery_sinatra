@@ -3,7 +3,7 @@
 # Install
 
     $ gem install sinatra
-    Successfully installed sinatra-1.0
+    Successfully installed sinatra-1.1
     1 gem installed
 
 
