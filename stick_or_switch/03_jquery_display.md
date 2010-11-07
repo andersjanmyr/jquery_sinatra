@@ -43,6 +43,7 @@
     @@@javascript
     $.getJSON('/stats', function(data) {
       updateStats(data);
+      resetButtons();
     });
 
     function updateStats(data) {
