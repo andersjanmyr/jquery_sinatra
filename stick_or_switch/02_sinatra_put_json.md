@@ -39,15 +39,23 @@
 ## to_json
 
     @@@ ruby
-    post "/stats/*/*/*" do |quiz, s_or_s, door|
-      answer = $quizzes[quiz.to_i]
-      update_stats(s_or_s)
-      message = {
-        :stick => [$stick_correct_count, $stick_count],
-        :switch => [$switch_correct_count, $switch_count],
-        :answer => answer,
-        :correct => (answer == door.to_i),
-        :stick_or_switch => s_or_s}
-      message.to_json
+    put "/quiz/*/*" do |quiz, choice|
+      quiz = Quiz.quizzes[quiz.to_i]
+      quiz.choose(choice)
+      status = quiz.status
+      Stats.get(status)
+      status.to_json
     end
+
+!SLIDE code
+# JSON
+
+    @@@ Javascript
+    {
+      "correct_door": 3,
+      "is_correct": false,
+      "choice": "stick",
+      "stick": [8, 14],
+      "switch": [2, 5]
+    }
 
