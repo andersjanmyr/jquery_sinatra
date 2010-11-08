@@ -14,7 +14,7 @@
 !SLIDE
 # Credits
 
-!SLIDE bullets small
+!SLIDE bullets small sinatra
 # Sinatra
 
 * *Views/Templates*: Haml, Erb, Rdoc, Sass, Markdown, ...
@@ -24,6 +24,19 @@
 * *Testing*, Simple testing with Rack::Test
 * ...
 
+!SLIDE bullets small jquery
+# jQuery
+
+## jQuery UI
+
+* *Interaction*, Draggable, Droppable, Sortable, ...
+* *Widgets*, Datepicker, ProgressBar, Slider, ...
+* *Effects*, Fade, Bounce, Explode, Shake, ...
+* *Theming*
+
+## jQuery Mobile
+
+* Touch-Optimized Web Framework for Smartphones & Tablets
 
 !SLIDE bullets small
 # Showoff

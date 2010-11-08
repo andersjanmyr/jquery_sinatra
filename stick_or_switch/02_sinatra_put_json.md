@@ -3,7 +3,7 @@
 # Post with Splat Parameters
 
     @@@ ruby
-    post "/stats/*/*/*" do
+    post "/quiz/*/*" do
     end
 
 !SLIDE code sinatra
@@ -15,10 +15,10 @@
     end
 
     # /quiz/234/select/3
-    # => 234, 3
+    # => [234, 3]
 
     # /quiz/234/select/3/5/6
-    # => 234, 3/5/6
+    # => [234, 3/5/6]
 
 !SLIDE code sinatra
 # Splat Parameters with Block
