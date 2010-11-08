@@ -20,7 +20,7 @@
 
 !SLIDE jquery
 # updateStats
-## text
+## Javascript, text
 
     @@@ javascript
     function updateStat(data, kind) {

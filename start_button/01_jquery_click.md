@@ -3,6 +3,7 @@
 
 * Find some html
 * Do something with it
+* $ = jQuery
 
 !SLIDE jquery code
 ## click, preventDefault, attr, text
