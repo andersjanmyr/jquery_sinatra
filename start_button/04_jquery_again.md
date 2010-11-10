@@ -1,5 +1,5 @@
 !SLIDE jquery code
-# ajax again
+# jquery again
 
     @@@ Javascript
     $.ajax({
