@@ -10,26 +10,26 @@
 
 # Splat Parameters
     @@@ ruby
-    put '/quiz/*/select/*' do
+    put '/quiz/*/*' do
       "#{params[:splat]}"
     end
 
-    # /quiz/234/select/3
-    # => [234, 3]
+    # /quiz/234/stick
+    # => [234, 'stick']
 
-    # /quiz/234/select/3/5/6
-    # => [234, 3/5/6]
+    # /quiz/234/stick/3/5/6
+    # => [234, stick/3/5/6]
 
 !SLIDE code sinatra
 # Splat Parameters with Block
 
     @@@ ruby
-    put '/quiz/*/select/*' do |q, d|
-      "#{q}, #{d}"
+    put '/quiz/*/*' do |q, c|
+      "#{q}, #{c}"
     end
 
-    # /quiz/234/select/3
-    # => 234, 3
+    # /quiz/234/stick
+    # => 234, stick
 
     # /quiz/234/select/3/5/6
     # => 234, 3/5/6
