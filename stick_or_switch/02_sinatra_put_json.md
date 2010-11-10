@@ -39,6 +39,8 @@
 ## to_json
 
     @@@ ruby
+    require 'json'
+
     put "/quiz/*/*" do |quiz, choice|
       quiz = Quiz.quizzes[quiz.to_i]
       quiz.choose(choice)
