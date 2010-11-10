@@ -67,6 +67,9 @@
     To git@heroku.com:wheres-the-tapir.git
        dd075d4..7bc04fd  master -> master
 
+!SLIDE center
+![Oredev App](oredev_app.png)
+
 !SLIDE
 # Questions?
 ### anders.janmyr@jayway.com
