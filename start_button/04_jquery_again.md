@@ -1,5 +1,5 @@
 !SLIDE jquery code
-# jquery again
+# jQuery again
 
     @@@ Javascript
     $.ajax({
@@ -41,7 +41,7 @@
 
 
 !SLIDE jquery
-# ajax call refactored
+# saveToken
 
     @@@ Javascript
     var currentToken;

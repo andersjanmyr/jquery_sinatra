@@ -1,6 +1,3 @@
-!SLIDE center transition=scrollUp
-![Tapir App](stick_or_switch.png)
-
 !SLIDE jquery
 # putChoice
 ## json
@@ -35,6 +32,10 @@
           + ' = ' + percentage + '%'
       $('#' + kind + '-count').text(text);
     }
+
+!SLIDE center transition=scrollUp
+![Tapir App](stats.png)
+
 
 !SLIDE jquery
 # Initiate
