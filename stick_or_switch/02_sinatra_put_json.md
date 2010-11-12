@@ -1,9 +1,9 @@
 !SLIDE code sinatra
 
-# Post with Splat Parameters
+# Put with Splat Parameters
 
     @@@ ruby
-    post "/quiz/*/*" do
+    put "/quiz/*/*" do
     end
 
 !SLIDE code sinatra
