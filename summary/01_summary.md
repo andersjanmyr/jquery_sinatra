@@ -1,27 +1,14 @@
-!SLIDE bullets small
-# Code and Slides
-
-## Application
-
-* Live, http://wheres-the-tapir.heroku.com/index.html
-
-* Source, http://github.com/andersjanmyr/wheres-the-tapir
-
-## Presentation
-
-* http://github.com/andersjanmyr/jquery_sinatra
-
 !SLIDE
-# Credits
+# Tools
 
 !SLIDE bullets small sinatra
 # Sinatra
 
 * *Views/Templates*: Haml, Erb, Rdoc, Sass, Markdown, ...
 * *Filters*: before and after
-* *Error handling*, Simple custom error handling
+* *Error handling*: Simple custom error handling
 * *Rack*: Middleware, compression, speling, recording, ...
-* *Testing*, Simple testing with Rack::Test
+* *Testing*: Simple testing with Rack::Test
 * ...
 
 !SLIDE bullets small jquery
@@ -46,6 +33,9 @@
 * Sinatra
 * https://github.com/schacon/showoff
 
+!SLIDE center
+![Oredev App](oredev_app.png)
+
 !SLIDE commandline
 # Heroku
 
@@ -67,8 +57,19 @@
     To git@heroku.com:wheres-the-tapir.git
        dd075d4..7bc04fd  master -> master
 
-!SLIDE center
-![Oredev App](oredev_app.png)
+!SLIDE bullets small
+# Code and Slides
+
+## Application
+
+* Live, http://wheres-the-tapir.heroku.com/index.html
+
+* Source, http://github.com/andersjanmyr/wheres-the-tapir
+
+## Presentation
+
+* http://github.com/andersjanmyr/jquery_sinatra
+
 
 !SLIDE
 # Questions?
