@@ -17,6 +17,17 @@
 
 !SLIDE jquery
 # updateStats
+
+    @@@ javascript
+    function updateStats(data) {
+      updateStat(data, 'stick');
+      updateStat(data, 'switch');
+    }
+
+
+
+!SLIDE jquery
+# updateStat
 ## Javascript
 
     @@@ javascript
@@ -46,10 +57,5 @@
       updateStats(data);
       resetButtons();
     });
-
-    function updateStats(data) {
-      updateStat(data, 'stick');
-      updateStat(data, 'switch');
-    }
 
 
