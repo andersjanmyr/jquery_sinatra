@@ -14,3 +14,11 @@ h1, h2 {
   height: 30px;
   content: url(images/jay_small.png);
 }
+
+::-moz-selection{
+    background: pink;
+}
+
+::selection {
+    background: pink;
+}

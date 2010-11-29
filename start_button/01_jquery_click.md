@@ -20,6 +20,40 @@
 
     });
 
+
+!SLIDE jquery code execute
+## $(function() {});
+
+    @@@ Javascript
+    // The jQuery function execute when
+    // the DOM is ready to be manipulated
+    $(function() {
+      alert('The dom is ready');
+    })
+
+!SLIDE jquery code execute
+## Selector $('#start'), Listener .click
+
+
+    @@@ Javascript
+    // Select the element with id start
+    // and attach a click listener to it
+    $('#start').click(function(e) {
+      alert("OK, OK, I'm clicked!");
+    });
+
+<button id='start'>Start</button>
+
+!SLIDE jquery code execute
+## $(this)
+
+    @@@ Javascript
+    $('#disable_me').click(function(e) {
+      $(this).attr('disabled', 'disabled');
+    });
+
+<button id='disable_me'>Disable Me</button>
+
 !SLIDE jquery code
 # Extract Method
 
@@ -36,7 +70,4 @@
         $.ajax(...);
       });
     });
-
-
-
 
