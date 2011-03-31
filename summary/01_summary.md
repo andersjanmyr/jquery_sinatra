@@ -65,7 +65,7 @@
 
 ## Presentation
 
-* Live, http://jquery-sinatra.heroku.com/
+* Live, http://andersjanmyr.github.com/jquery_sinatra/
 * Source, http://github.com/andersjanmyr/jquery_sinatra
 
 
