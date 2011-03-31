@@ -1,0 +1,22 @@
+.sinatra {
+  background: url(images/sinatra.gif) no-repeat;
+  width: 1020px;
+  height: 760px;
+}
+
+.jquery {
+  background: url(images/jquery.png) center bottom no-repeat;
+  width: 1020px;
+  height: 760px;
+}
+
+button {
+    height: 100px;
+    width: 200px;
+    background-color: lightblue;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    border-radius: 1em;
+    font-size: large;
+    margin-left: 300px;
+}
