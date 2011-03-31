@@ -3,6 +3,7 @@
 .notes Simple HTML
 
     @@@ Html
+    <!DOCTYPE html>
     <html>
     <head>
       <link rel="stylesheet" href="app.css" type="text/css">

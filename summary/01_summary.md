@@ -33,9 +33,6 @@
 * Sinatra
 * https://github.com/schacon/showoff
 
-!SLIDE center
-![Oredev App](oredev_app.png)
-
 !SLIDE commandline
 # Heroku
 
@@ -68,7 +65,8 @@
 
 ## Presentation
 
-* http://github.com/andersjanmyr/jquery_sinatra
+* Live, http://jquery-sinatra.heroku.com/
+* Source, http://github.com/andersjanmyr/jquery_sinatra
 
 
 !SLIDE
