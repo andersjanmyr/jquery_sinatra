@@ -119,12 +119,12 @@ Javascript, with the hope, that you will come to love it too.</p>
 <p><img src="./file/intro/where_is_the_tapir_app.png" width="807" height="596" alt="Tapir App"/></p>
 </div>
 </div><div class="slide" data-transition="none"><div class="content bullets" ref="intro/01_intro/7">
-<h1>What are you?</h1>
+<h1>What do you Choose?</h1>
 
 <ul>
-<li><p>Sticker, the odds are better if I stick!</p></li>
-<li><p>Switcher, the odds are better if I switch!</p></li>
-<li><p>Don't care, the odds are the same!</p></li>
+<li>1 - The odds are better if I stick!</li>
+<li>2 - The odds are better if I switch!</li>
+<li>3 - The odds are the same!</li>
 </ul>
 
 </div>
@@ -248,10 +248,13 @@ $('#disable_me').click(function(e) {
 
 <p><button id="disable_me">Disable Me</button></p>
 </div>
-</div><div class="slide" data-transition="scrollUp"><div class="content center" ref="start_button/01_jquery_click/1">
+</div><div class="slide" data-transition="none"><div class="content S center" ref="start_button/01_jquery_click/1">
+<p><img src="./file/start_button/flow.png" width="604" height="463" alt="flow"/></p>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content center" ref="start_button/01_jquery_click/2">
 <p><img src="./file/start_button/../intro/where_is_the_tapir_app.png" width="807" height="596" alt="Tapir App"/></p>
 </div>
-</div><div class="slide" data-transition="none"><div class="content jquery code" ref="start_button/01_jquery_click/2">
+</div><div class="slide" data-transition="none"><div class="content jquery code" ref="start_button/01_jquery_click/3">
 <h2>click, preventDefault, attr, text</h2>
 
 <pre class="sh_javascript"><code>$(function() { //jQuery document ready
@@ -265,7 +268,7 @@ $('#disable_me').click(function(e) {
 
 });</code></pre>
 </div>
-</div><div class="slide" data-transition="none"><div class="content jquery code" ref="start_button/01_jquery_click/3">
+</div><div class="slide" data-transition="none"><div class="content jquery code" ref="start_button/01_jquery_click/4">
 <h1>Extract Method</h1>
 
 <pre class="sh_javascript"><code>$(function() {
@@ -663,10 +666,62 @@ end</code></pre>
 </div><div class="slide" data-transition="none"><div class="content" ref="stick_or_switch/04_sinatra_stats/3">
 <h1>Show Application</h1>
 </div>
-</div><div class="slide" data-transition="none"><div class="content" ref="summary/01_summary/1">
-<h1>Tools</h1>
+</div><div class="slide" data-transition="none"><div class="content center" ref="summary/01_testing/1">
+<h1>Testing</h1>
 </div>
-</div><div class="slide" data-transition="none"><div class="content bullets small sinatra" ref="summary/01_summary/2">
+</div><div class="slide" data-transition="none"><div class="content" ref="summary/01_testing/2">
+<h1>RSpec with Rack-Test</h1>
+
+<pre class="sh_ruby"><code>describe 'Wheres the Tapir' do
+
+  describe "post /quiz" do
+    before :all do
+      post '/quiz'
+    end
+
+    it 'should be ok' do
+      last_response.should be_ok
+    end
+
+    it "should return an id for the quiz" do
+      last_response.body.should match(/\d+/)
+    end
+  end
+end</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content center" ref="summary/01_testing/3">
+<h1>RSpec with Rack-Test</h1>
+
+<p><img src="./file/summary/rspec-rack.png" width="814" height="420" alt="rspec-rack"/></p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content small" ref="summary/01_testing/4">
+<h1>QUnit</h1>
+
+<pre class="sh_javascript"><code>$(function() {
+
+  module("Sanity");
+  test('A sanity test, should be green!', function() {
+    same('sane', "sane", 'Setup is sane');
+  });
+
+  module('App#infoResult');
+  test('correct, stick, should give correct text!', function() {
+    infoResult({is_correct: true, choice: 'stick'});
+    equal($('#info-message').text, 
+        'You stick and you are right!');
+  });
+
+});</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content center" ref="summary/01_testing/5">
+<h1>QUnit</h1>
+
+<p><img src="./file/summary/qunit.png" width="519" height="390" alt="qunit"/></p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="summary/02_summary/1">
+<h1>More Info</h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets small sinatra" ref="summary/02_summary/2">
 <h1>Sinatra</h1>
 
 <ul>
@@ -674,12 +729,11 @@ end</code></pre>
 <li><em>Filters</em>: before and after</li>
 <li><em>Error handling</em>: Simple custom error handling</li>
 <li><em>Rack</em>: Middleware, compression, speling, recording, ...</li>
-<li><em>Testing</em>: Simple testing with Rack::Test</li>
 <li>...</li>
 </ul>
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content bullets small jquery" ref="summary/01_summary/3">
+</div><div class="slide" data-transition="none"><div class="content bullets small jquery" ref="summary/02_summary/3">
 <h1>jQuery</h1>
 
 <h2>jQuery UI</h2>
@@ -699,7 +753,7 @@ end</code></pre>
 </ul>
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content bullets small" ref="summary/01_summary/4">
+</div><div class="slide" data-transition="none"><div class="content bullets small" ref="summary/02_summary/4">
 <h1>Showoff</h1>
 
 <h2>Presentation Software, by Scott Chacon</h2>
@@ -711,7 +765,7 @@ end</code></pre>
 </ul>
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content commandline" ref="summary/01_summary/5">
+</div><div class="slide" data-transition="none"><div class="content commandline" ref="summary/02_summary/5">
 <h1>Heroku</h1>
 
 <pre><code><code class="command">$ git push heroku master  #deploy to heroku</code><code class="result">
@@ -733,7 +787,7 @@ To git@heroku.com:wheres-the-tapir.git
    dd075d4..7bc04fd  master -&gt; master
 </code></code></pre>
 </div>
-</div><div class="slide" data-transition="none"><div class="content bullets small" ref="summary/01_summary/6">
+</div><div class="slide" data-transition="none"><div class="content bullets small" ref="summary/02_summary/6">
 <h1>Code and Slides</h1>
 
 <h2>Application</h2>
@@ -752,7 +806,7 @@ To git@heroku.com:wheres-the-tapir.git
 </ul>
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content" ref="summary/01_summary/7">
+</div><div class="slide" data-transition="none"><div class="content" ref="summary/02_summary/7">
 <h1>Questions?</h1>
 
 <h3>anders.janmyr@jayway.com</h3>
