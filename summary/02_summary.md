@@ -1,5 +1,5 @@
 !SLIDE
-# Tools
+# More Info
 
 !SLIDE bullets small sinatra
 # Sinatra
@@ -8,7 +8,6 @@
 * *Filters*: before and after
 * *Error handling*: Simple custom error handling
 * *Rack*: Middleware, compression, speling, recording, ...
-* *Testing*: Simple testing with Rack::Test
 * ...
 
 !SLIDE bullets small jquery

@@ -38,10 +38,9 @@ Javascript, with the hope, that you will come to love it too.
 ![Tapir App](where_is_the_tapir_app.png)
 
 !SLIDE bullets
-# What are you?
+# What do you Choose?
 
-* Sticker, the odds are better if I stick!
+* 1 - The odds are better if I stick!
+* 2 - The odds are better if I switch!
+* 3 - The odds are the same!
 
-* Switcher, the odds are better if I switch!
-
-* Don't care, the odds are the same!

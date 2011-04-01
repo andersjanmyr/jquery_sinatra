@@ -1,3 +1,6 @@
+!SLIDES center
+![flow](flow.png)
+
 !SLIDE center transition=scrollUp
 ![Tapir App](../intro/where_is_the_tapir_app.png)
 
