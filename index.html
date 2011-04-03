@@ -241,7 +241,7 @@ $('#start').click(function(e) {
 <h2>$(this), .attr</h2>
 
 <pre class="sh_javascript"><code>// Wraps the element
-// when given a element as parameter
+// when given an element as parameter
 $('#disable_me').click(function(e) {
   $(this).attr('disabled', 'disabled');
 });</code></pre>
@@ -249,6 +249,8 @@ $('#disable_me').click(function(e) {
 <p><button id="disable_me">Disable Me</button></p>
 </div>
 </div><div class="slide" data-transition="none"><div class="content S center" ref="start_button/01_jquery_click/1">
+<h2>Application Flow</h2>
+
 <p><img src="./file/start_button/flow.png" width="604" height="463" alt="flow"/></p>
 </div>
 </div><div class="slide" data-transition="scrollUp"><div class="content center" ref="start_button/01_jquery_click/2">
@@ -517,6 +519,15 @@ end</code></pre>
 <p><img src="./file/stick_or_switch/stick_or_switch.png" width="808" height="528" alt="Tapir App"/></p>
 </div>
 </div><div class="slide" data-transition="none"><div class="content jquery" ref="stick_or_switch/01_jquery_put_json/2">
+<h1>$('#stick-switch button')</h1>
+
+<pre class="sh_javascript"><code>$('#stick-switch button').click(function(e) {
+  e.preventDefault();
+  var value = $(this).data('id');
+  putChoice(value);
+});</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content jquery" ref="stick_or_switch/01_jquery_put_json/3">
 <h1>putChoice</h1>
 
 <h2>json</h2>
@@ -565,7 +576,7 @@ end
 # =&gt; 234, 3/5/6</code></pre>
 </div>
 </div><div class="slide" data-transition="none"><div class="content code sinatra" ref="stick_or_switch/02_sinatra_put_json/4">
-<h1>/quiz impl</h1>
+<h1>/quiz/:id/:choice impl</h1>
 
 <h2>to_json</h2>
 

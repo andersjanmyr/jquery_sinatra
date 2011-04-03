@@ -472,7 +472,7 @@ function executeCode () {
 	setTimeout(function() { codeDiv.removeClass("executing");}, 250 );
 	if (result != null) print(result);
 }
-$('.sh_javascript code').live("click", executeCode);
+$('.execute .sh_javascript code').live("click", executeCode);
 
 function executeRuby () {
 	var codeDiv = $(this);
@@ -482,7 +482,7 @@ function executeRuby () {
         codeDiv.removeClass("executing");
     });
 }
-$('.sh_ruby code').live("click", executeRuby);
+$('.execute .sh_ruby code').live("click", executeRuby);
 
 
 /********************
