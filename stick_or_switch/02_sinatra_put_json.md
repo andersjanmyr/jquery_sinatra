@@ -35,7 +35,7 @@
     # => 234, 3/5/6
 
 !SLIDE code sinatra
-# /quiz impl
+# /quiz/:id/:choice impl
 ## to_json
 
     @@@ ruby

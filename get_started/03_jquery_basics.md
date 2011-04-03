@@ -35,7 +35,7 @@
 
     @@@ Javascript
     // Wraps the element
-    // when given a element as parameter
+    // when given an element as parameter
     $('#disable_me').click(function(e) {
       $(this).attr('disabled', 'disabled');
     });
